@@ -24,4 +24,12 @@ test.describe.only('Tips & Tricks Section', () => {
             await page.waitForTimeout(1000)
         })
     }
+
+    test('Mouse Movement Simulation', async ({ page }) => {
+        await page.goto('https://example.com')
+        await page.mouse.move(0, 0)
+        await page.mouse.down()
+        await page.mouse.move(0, 100)
+        await page.mouse.up()
+    })
 })
